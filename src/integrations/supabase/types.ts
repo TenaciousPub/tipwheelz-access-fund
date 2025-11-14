@@ -47,6 +47,13 @@ export type Database = {
             foreignKeyName: "shoutouts_tip_id_fkey"
             columns: ["tip_id"]
             isOneToOne: false
+            referencedRelation: "public_tips"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "shoutouts_tip_id_fkey"
+            columns: ["tip_id"]
+            isOneToOne: false
             referencedRelation: "tips"
             referencedColumns: ["id"]
           },
@@ -120,7 +127,39 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      public_tips: {
+        Row: {
+          amount: number | null
+          created_at: string | null
+          donor_name: string | null
+          id: string | null
+          message: string | null
+          payment_status: Database["public"]["Enums"]["payment_status"] | null
+          tier_label: string | null
+          tip_type: Database["public"]["Enums"]["tip_type"] | null
+        }
+        Insert: {
+          amount?: number | null
+          created_at?: string | null
+          donor_name?: string | null
+          id?: string | null
+          message?: string | null
+          payment_status?: Database["public"]["Enums"]["payment_status"] | null
+          tier_label?: string | null
+          tip_type?: Database["public"]["Enums"]["tip_type"] | null
+        }
+        Update: {
+          amount?: number | null
+          created_at?: string | null
+          donor_name?: string | null
+          id?: string | null
+          message?: string | null
+          payment_status?: Database["public"]["Enums"]["payment_status"] | null
+          tier_label?: string | null
+          tip_type?: Database["public"]["Enums"]["tip_type"] | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       is_admin: { Args: { user_id: string }; Returns: boolean }
