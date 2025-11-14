@@ -46,6 +46,15 @@ export const Hero = () => {
         <p className="text-sm text-muted-foreground max-w-xl mx-auto pt-2">
           Tips = more videos, captions, ride costs, and gear.
         </p>
+
+        <div className="pt-4">
+          <a 
+            href="/wall-of-thanks" 
+            className="text-sm text-primary hover:text-primary/80 transition-colors underline underline-offset-4"
+          >
+            See who's fueling the fight →
+          </a>
+        </div>
       </div>
     </section>
   );
