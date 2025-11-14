@@ -46,7 +46,7 @@ export const Footer = () => {
 
         <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
           <a href="/wall-of-thanks" className="hover:text-primary transition-colors">Wall of Thanks</a>
-          <a href="#" className="hover:text-primary transition-colors">Terms</a>
+          <a href="/terms" className="hover:text-primary transition-colors">Terms</a>
           <a href="#" className="hover:text-primary transition-colors">Privacy</a>
           <a href="#" className="hover:text-primary transition-colors">Refunds</a>
         </div>
