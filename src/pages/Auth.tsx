@@ -14,6 +14,8 @@ export default function Auth() {
   const [loading, setLoading] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
+  
+  // Auth page for admin login/signup
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
