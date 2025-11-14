@@ -57,11 +57,10 @@ export default function WallOfThanks() {
       setShoutouts(shoutoutsData);
     }
 
-    // Fetch recent backers (last 20)
+    // Fetch recent backers (last 20) from secure public view
     const { data: backersData } = await supabase
-      .from("tips")
+      .from("public_tips")
       .select("donor_name, amount, tier_label, created_at")
-      .eq("payment_status", "completed")
       .order("created_at", { ascending: false })
       .limit(20);
 
