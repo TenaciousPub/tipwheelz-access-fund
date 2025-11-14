@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 
 const socialLinks = [
   { name: "TikTok", url: "https://tiktok.com/@mr.wheelz88", handle: "@mr.wheelz88" },
-  { name: "Instagram", url: "https://instagram.com/mrwheelz2025", handle: "@mrwheelz2025" },
+  { name: "Instagram", url: "https://www.instagram.com/mrwheelz2025/", handle: "@mrwheelz2025" },
   { name: "YouTube", url: "https://youtube.com/@mrwheelz", handle: "Mr. Wheelz" },
   { name: "X", url: "https://x.com/mrwheelz88", handle: "@mrwheelz88" },
 ];
