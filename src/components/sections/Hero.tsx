@@ -7,7 +7,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="relative min-h-[85vh] flex items-center justify-center px-4 py-16">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-foreground leading-none">
           Fuel the jokes.

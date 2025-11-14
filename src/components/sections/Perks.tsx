@@ -32,9 +32,9 @@ const oneTimePerks = [
 
 export const Perks = () => {
   return (
-    <section className="py-20 px-4 bg-card/30">
+    <section className="py-12 px-4 bg-card/30">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <Gift className="w-12 h-12 text-primary mx-auto mb-4" aria-hidden="true" />
           <h2 className="font-display text-4xl md:text-6xl text-foreground mb-4">
             Your perks

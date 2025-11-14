@@ -30,9 +30,9 @@ const faqs = [
 
 export const FAQ = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 px-4">
       <div className="max-w-3xl mx-auto">
-        <h2 className="font-display text-4xl md:text-6xl text-center mb-12 text-foreground">
+        <h2 className="font-display text-4xl md:text-6xl text-center mb-8 text-foreground">
           FAQ
         </h2>
 

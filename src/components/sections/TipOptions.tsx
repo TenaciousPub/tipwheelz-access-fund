@@ -22,9 +22,9 @@ export const TipOptions = () => {
   const [selectedTab, setSelectedTab] = useState<"one-time" | "monthly">("one-time");
 
   return (
-    <section id="tip-options" className="py-20 px-4 scroll-mt-20">
+    <section id="tip-options" className="py-12 px-4 scroll-mt-20">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-display text-4xl md:text-6xl text-center mb-12 text-foreground">
+        <h2 className="font-display text-4xl md:text-6xl text-center mb-8 text-foreground">
           Choose your tip
         </h2>
 
