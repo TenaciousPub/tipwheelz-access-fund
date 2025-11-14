@@ -12,6 +12,7 @@ export default function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,19 +32,35 @@ export default function Auth() {
     return () => subscription.unsubscribe();
   }, [navigate]);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    if (isSignUp) {
+      const { error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: `${window.location.origin}/admin`
+        }
+      });
 
-    if (error) {
-      toast.error(error.message);
+      if (error) {
+        toast.error(error.message);
+      } else {
+        toast.success("Account created! Redirecting to admin...");
+      }
     } else {
-      toast.success("Logged in successfully!");
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+
+      if (error) {
+        toast.error(error.message);
+      } else {
+        toast.success("Logged in successfully!");
+      }
     }
     setLoading(false);
   };
@@ -54,13 +71,17 @@ export default function Auth() {
       
       <Card className="w-full max-w-md bg-card/80 backdrop-blur-sm border-border relative z-10">
         <CardHeader>
-          <CardTitle className="font-display text-3xl text-center">Admin Login</CardTitle>
+          <CardTitle className="font-display text-3xl text-center">
+            {isSignUp ? "Create Admin Account" : "Admin Login"}
+          </CardTitle>
           <CardDescription className="text-center">
-            Sign in to access the TipWheelz dashboard
+            {isSignUp 
+              ? "Sign up to create your admin account" 
+              : "Sign in to access the TipWheelz dashboard"}
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleLogin} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -86,9 +107,24 @@ export default function Auth() {
               />
             </div>
             <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={loading}>
-              {loading ? "Signing in..." : "Sign In"}
+              {loading 
+                ? (isSignUp ? "Creating account..." : "Signing in...") 
+                : (isSignUp ? "Create Account" : "Sign In")}
             </Button>
           </form>
+          
+          <div className="mt-4 text-center">
+            <button
+              type="button"
+              onClick={() => setIsSignUp(!isSignUp)}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              disabled={loading}
+            >
+              {isSignUp 
+                ? "Already have an account? Sign in" 
+                : "Need an account? Sign up"}
+            </button>
+          </div>
         </CardContent>
       </Card>
     </div>
