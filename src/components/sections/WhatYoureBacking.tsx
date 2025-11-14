@@ -21,12 +21,12 @@ const backingItems = [
 
 export const WhatYoureBacking = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-display text-4xl md:text-6xl text-center mb-4 text-foreground">
+        <h2 className="font-display text-4xl md:text-6xl text-center mb-3 text-foreground">
           What you're backing
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
           Every dollar helps film, edit, caption, and move the chair.
         </p>
 
