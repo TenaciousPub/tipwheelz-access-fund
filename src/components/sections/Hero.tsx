@@ -34,7 +34,7 @@ export const Hero = () => {
             onClick={scrollToTips}
             className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-8 py-6 transition-all hover:scale-105"
           >
-            Join the TipWheelz Crew
+            Join the Mr. Wheelz Crew
           </Button>
         </div>
 
