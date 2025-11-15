@@ -200,7 +200,7 @@ export default function WallOfThanks() {
                     <Link to="/#tip-options">
                       <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                         <Heart className="w-5 h-5 mr-2" />
-                        Support TipWheelz
+                        Support Mr Wheelz
                       </Button>
                     </Link>
                   </CardContent>
