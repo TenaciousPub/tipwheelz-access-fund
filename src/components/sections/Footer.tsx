@@ -13,7 +13,7 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto space-y-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <h3 className="font-display text-2xl text-foreground mb-2">TipWheelz</h3>
+            <h3 className="font-display text-2xl text-foreground mb-2">Mr Wheelz</h3>
             <p className="text-sm text-muted-foreground">Comedy, advocacy, access.</p>
           </div>
 
@@ -37,10 +37,10 @@ export const Footer = () => {
         <div className="flex items-center justify-center gap-2 text-muted-foreground">
           <Mail className="w-4 h-4" aria-hidden="true" />
           <a
-            href="mailto:hey@tipwheelz.com"
+            href="mailto:hey@mrwheelz.com"
             className="text-sm hover:text-primary transition-colors"
           >
-            hey@tipwheelz.com
+            hey@mrwheelz.com
           </a>
         </div>
 

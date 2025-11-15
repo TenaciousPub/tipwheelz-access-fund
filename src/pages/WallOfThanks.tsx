@@ -153,7 +153,7 @@ export default function WallOfThanks() {
                   <Card className="bg-card/80 backdrop-blur-sm border-border">
                     <CardContent className="p-12 text-center">
                       <p className="text-muted-foreground text-lg">
-                        Be the first to support TipWheelz!
+                        Be the first to support Mr Wheelz!
                       </p>
                       <Link to="/#tip-options">
                         <Button className="mt-4 bg-primary hover:bg-primary/90">

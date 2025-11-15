@@ -67,7 +67,7 @@ export default function Admin() {
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <h1 className="font-display text-2xl md:text-3xl text-foreground">
-            TipWheelz Admin
+            Mr Wheelz Admin
           </h1>
           <Button variant="outline" onClick={handleLogout}>
             <LogOut className="w-4 h-4 mr-2" />
