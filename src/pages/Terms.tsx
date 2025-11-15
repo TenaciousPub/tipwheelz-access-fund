@@ -27,7 +27,7 @@ const Terms = () => {
 
             <div className="prose prose-invert max-w-none space-y-8">
               <p className="text-foreground/90">
-                Welcome to TipWheelz ("we," "us," "our"). By using tipwheelz.com and any related services (collectively, the "Site"), you agree to these Terms. If you don't agree, don't use the Site.
+                Welcome to Mr Wheelz ("we," "us," "our"). By using mrwheelz.com and any related services (collectively, the "Site"), you agree to these Terms. If you don't agree, don't use the Site.
               </p>
 
               <section>
@@ -40,7 +40,7 @@ const Terms = () => {
               <section>
                 <h2 className="font-display text-2xl text-foreground mb-3">2) What we do</h2>
                 <p className="text-foreground/80">
-                  TipWheelz lets supporters send tips (one-time or recurring), buy digital perks, and access creator content and updates.
+                  Mr Wheelz lets supporters send tips (one-time or recurring), buy digital perks, and access creator content and updates.
                 </p>
               </section>
 
@@ -113,8 +113,8 @@ const Terms = () => {
                 <h2 className="font-display text-2xl text-foreground mb-3">9) Accessibility</h2>
                 <p className="text-foreground/80">
                   We aim for an accessible experience and welcome feedback at{" "}
-                  <a href="mailto:hey@tipwheelz.com" className="text-primary hover:text-primary/80 transition-colors">
-                    hey@tipwheelz.com
+                  <a href="mailto:hey@mrwheelz.com" className="text-primary hover:text-primary/80 transition-colors">
+                    hey@mrwheelz.com
                   </a>
                   .
                 </p>
@@ -187,8 +187,8 @@ const Terms = () => {
                 <h2 className="font-display text-2xl text-foreground mb-3">19) Contact</h2>
                 <p className="text-foreground/80">
                   Questions about these Terms or billing issues:{" "}
-                  <a href="mailto:hey@tipwheelz.com" className="text-primary hover:text-primary/80 transition-colors">
-                    hey@tipwheelz.com
+                  <a href="mailto:hey@mrwheelz.com" className="text-primary hover:text-primary/80 transition-colors">
+                    hey@mrwheelz.com
                   </a>
                 </p>
               </section>

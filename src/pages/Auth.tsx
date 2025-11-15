@@ -79,7 +79,7 @@ export default function Auth() {
           <CardDescription className="text-center">
             {isSignUp 
               ? "Sign up to create your admin account" 
-              : "Sign in to access the TipWheelz dashboard"}
+              : "Sign in to access the Mr Wheelz dashboard"}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -91,7 +91,7 @@ export default function Auth() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@tipwheelz.com"
+                placeholder="admin@mrwheelz.com"
                 required
                 disabled={loading}
               />

@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "What about refunds?",
-    answer: "Digital perks are delivered instantly, so tips are non-refundable. However, if there's a billing error on our end, we'll happily fix it—just email hey@tipwheelz.com.",
+    answer: "Digital perks are delivered instantly, so tips are non-refundable. However, if there's a billing error on our end, we'll happily fix it—just email hey@mrwheelz.com.",
   },
 ];
 
