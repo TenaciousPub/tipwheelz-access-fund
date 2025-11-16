@@ -7,6 +7,23 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import { ParticleBackground } from "@/components/ParticleBackground";
+import { z } from "zod";
+
+const authSchema = z.object({
+  email: z
+    .string()
+    .trim()
+    .min(1, "Email is required")
+    .email("Invalid email format")
+    .max(255, "Email must be less than 255 characters"),
+  password: z
+    .string()
+    .min(8, "Password must be at least 8 characters")
+    .max(128, "Password must be less than 128 characters")
+    .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+    .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+    .regex(/[0-9]/, "Password must contain at least one number"),
+});
 
 export default function Auth() {
   const [email, setEmail] = useState("");
@@ -38,10 +55,24 @@ export default function Auth() {
     e.preventDefault();
     setLoading(true);
 
+    // Validate inputs
+    const validation = authSchema.safeParse({ email, password });
+    
+    if (!validation.success) {
+      const errors = validation.error.errors;
+      errors.forEach((error) => {
+        toast.error(error.message);
+      });
+      setLoading(false);
+      return;
+    }
+
+    const { email: validatedEmail, password: validatedPassword } = validation.data;
+
     if (isSignUp) {
       const { error } = await supabase.auth.signUp({
-        email,
-        password,
+        email: validatedEmail,
+        password: validatedPassword,
         options: {
           emailRedirectTo: `${window.location.origin}/admin`
         }
@@ -54,8 +85,8 @@ export default function Auth() {
       }
     } else {
       const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
+        email: validatedEmail,
+        password: validatedPassword,
       });
 
       if (error) {
